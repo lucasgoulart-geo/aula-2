@@ -2,17 +2,18 @@
 o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que 
 leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João 
 deverá pagar. Imprima os dados do programa com as mensagens adequadas.
-15.	Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
-•	salário bruto.
-•	quanto pagou ao INSS.
-•	quanto pagou ao sindicato.
-•	o salário líquido.
-•	calcule os descontos e o salário líquido, conforme a tabela abaixo:
-Salário Bruto : R$ IR (11%) : R$ INSS (8%) : R$ Sindicato ( 5%) : R$ Salário Liquido : R$ Obs.: Salário Bruto - Descontos = Salário Líquido."""
+"""
+try:
+    peso = float(input('Digite o peso total da pesca em kg: '))
+    limite = 50.0
+    multa = 4
+    excesso = peso - limite
+    
+    if peso > limite:
+        multa_por_kg = excesso * 4
+        print(f'O excedente de pesca foi de {excesso}kg, por isso o valor de multa será de R${multa_por_kg: .2f}')
 
-peso = float(input('Digite o peso total da pesca: '))
-limte = 50.0
-multa = 0
-excesso = 0
-
-if peso > limite
+    else:
+        print(f'O valor de {limite} está dentro do limite, por isso não será gerada multa.')
+except ValueError:
+    print('Digite um valor válido')
